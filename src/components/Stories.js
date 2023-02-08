@@ -1,50 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;1,400&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="./css/reset.css" />
-  <link rel="stylesheet" href="./css/style.css" />
-  <title>Instagram</title>
-</head>
-
-<body>
-  <div class="root">
-    <!---Inicio NAVBAR-->
-    <div class="navbar">
-      <div class="container">
-        <div class="logo">
-          <ion-icon name="logo-instagram"></ion-icon>
-          <div class="separador"></div>
-          <img src="assets/img/logo.png" alt="logo"/>
-        </div>
-
-        <div class="pesquisa">
-          <input type="text" placeholder="Pesquisar" />
-        </div>
-
-        <div class="icones">
-          <ion-icon name="paper-plane-outline"></ion-icon>
-          <ion-icon name="compass-outline"></ion-icon>
-          <ion-icon name="heart-outline"></ion-icon>
-          <ion-icon name="person-outline"></ion-icon>
-        </div>
-
-        <div class="icones-mobile">
-          <ion-icon name="paper-plane-outline"></ion-icon>
-        </div>
-      </div>
-    </div>
-    <!---fim NAVBAR-->
-
-    <!---Inicio Body-->
-    <div class="corpo">
-      <!---Inicio Stories-->
-      <div class="esquerda">
+export default function Stories() {
+    return(
+        <div class="esquerda">
         <div class="stories">
           <div class="story">
             <div class="imagem">
@@ -197,102 +153,8 @@
           </div>
         </div>
       </div>
-      <!---Fim Stories-->
+        
+    )
+}
 
-      <!---Inicio Sidebar-->
-      <div class="sidebar">
-        <div class="usuario">
-          <img src="assets/img/catanacomics.svg" alt="imagem de perfil"/>
-          <div class="texto">
-            <span>
-              <strong>catanacomics</strong>
-              <ion-icon name="pencil"></ion-icon>
-            </span>
-          </div>
-        </div>
 
-        <div class="sugestoes">
-          <div class="titulo">
-            Sugestões para você
-            <div>Ver tudo</div>
-          </div>
-
-          <div class="sugestao">
-            <div class="usuario">
-              <img src="assets/img/bad.vibes.memes.svg" alt="bad.vibes.memes.svg"/>
-              <div class="texto">
-                <div class="nome">bad.vibes.memes</div>
-                <div class="razao">Segue você</div>
-              </div>
-            </div>
-
-            <div class="seguir">Seguir</div>
-          </div>
-
-          <div class="sugestao">
-            <div class="usuario">
-              <img src="assets/img/chibirdart.svg" alt="chibirdart"/>
-              <div class="texto">
-                <div class="nome">chibirdart</div>
-                <div class="razao">Segue você</div>
-              </div>
-            </div>
-
-            <div class="seguir">Seguir</div>
-          </div>
-
-          <div class="sugestao">
-            <div class="usuario">
-              <img src="assets/img/razoesparaacreditar.svg" alt="razoesparaacreditar" />
-              <div class="texto">
-                <div class="nome">razoesparaacreditar</div>
-                <div class="razao">Novo no Instagram</div>
-              </div>
-            </div>
-
-            <div class="seguir">Seguir</div>
-          </div>
-
-          <div class="sugestao">
-            <div class="usuario">
-              <img src="assets/img/adorable_animals.svg" alt="adorable_animals"/>
-              <div class="texto">
-                <div class="nome">adorable_animals</div>
-                <div class="razao">Segue você</div>
-              </div>
-            </div>
-
-            <div class="seguir">Seguir</div>
-          </div>
-
-          <div class="sugestao">
-            <div class="usuario">
-              <img src="assets/img/smallcutecats.svg" alt="smallcutecats"/>
-              <div class="texto">
-                <div class="nome">smallcutecats</div>
-                <div class="razao">Segue você</div>
-              </div>
-            </div>
-
-            <div class="seguir">Seguir</div>
-          </div>
-        </div>
-
-        <div class="links">
-          Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade • Termos • Localizações • Contas mais relevantes •
-          Hashtags • Idioma
-        </div>
-
-        <div class="copyright">
-          © 2021 INSTAGRAM DO FACEBOOK
-        </div>
-      </div>
-      <!---Fim Sidebar-->
-    </div>
-    <!---Fim Body-->
-  </div>
-
-  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
-</body>
-
-</html>
