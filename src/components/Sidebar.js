@@ -11,7 +11,7 @@ export default function Sidebar() {
             <div class="texto">
               <span>
                 <strong>{props.name}</strong>
-                <ion-icon onClick={changeName} data-test='name'   name="pencil"></ion-icon>
+                <ion-icon onClick={changeName} data-test='edit-name'   name="pencil"></ion-icon>
               </span>
             </div>
           </div>
