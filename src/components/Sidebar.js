@@ -7,11 +7,11 @@ export default function Sidebar() {
     function Profile(props) {
         return (
             <div class="usuario">
-            <img onClick={changeImage} src={props.image} alt={props.image}/>
+            <img data-test='profile-image' onClick={changeImage} src={props.image} alt={props.image}/>
             <div class="texto">
               <span>
                 <strong>{props.name}</strong>
-                <ion-icon onClick={changeName}   name="pencil"></ion-icon>
+                <ion-icon onClick={changeName} data-test='name'   name="pencil"></ion-icon>
               </span>
             </div>
           </div>
