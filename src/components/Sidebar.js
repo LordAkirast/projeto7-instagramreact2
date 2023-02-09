@@ -10,7 +10,7 @@ export default function Sidebar() {
             <img data-test='profile-image' onClick={changeImage} src={props.image} alt={props.image}/>
             <div class="texto">
               <span>
-                <strong>{props.name}</strong>
+                <strong data-test='name' >{props.name}</strong>
                 <ion-icon onClick={changeName} data-test='edit-name'   name="pencil"></ion-icon>
               </span>
             </div>
