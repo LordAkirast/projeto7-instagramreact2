@@ -6,9 +6,9 @@ export default function Sidebar() {
 
     function Profile(props) {
         return (
-            <div class="usuario">
+            <div className="usuario">
             <img data-test='profile-image' onClick={changeImage} src={props.image} alt={props.image}/>
-            <div class="texto">
+            <div className="texto">
               <span>
                 <strong data-test='name' >{props.name}</strong>
                 <ion-icon onClick={changeName} data-test='edit-name'   name="pencil"></ion-icon>
@@ -51,8 +51,8 @@ export default function Sidebar() {
             <Profile name={profileName} image={profileImage}/>
        
 
-        <div class="sugestoes">
-          <div class="titulo">
+        <div className="sugestoes">
+          <div className="titulo">
             Sugestões para você
             <div>Ver tudo</div>
           </div>
@@ -64,12 +64,12 @@ export default function Sidebar() {
           <Sugestao image="assets/img/smallcutecats.svg" alt="smallcutecats" nome="smallcutecats" razao="Segue você" follow="Seguir"/>
         </div>
 
-        <div class="links">
+        <div className="links">
           Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade • Termos • Localizações • Contas mais relevantes •
           Hashtags • Idioma
         </div>
 
-        <div class="copyright">
+        <div className="copyright">
           © 2021 INSTAGRAM DO FACEBOOK
         </div>
       </div>

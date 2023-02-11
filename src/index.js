@@ -11,6 +11,10 @@ function App() {
     )
 }
 
-const app = App()
-const elemento = document.querySelector(".root")
-ReactDOM.render(app, elemento)
+// const app = App()
+// const elemento = document.querySelector(".root")
+// ReactDOM.render(app, elemento)
+
+
+const root = ReactDOM.createRoot(document.getElementById("root"))
+root.render(<App/>)
