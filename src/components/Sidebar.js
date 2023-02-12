@@ -7,6 +7,44 @@ export default function Sidebar() {
   const [profileName, setprofilename] = react.useState("Daniel")
   const [profileImage, setprofileImage] = react.useState("assets/img/catanacomics.svg")
 
+  const sugestoes = [
+    {
+      image: "assets/img/bad.vibes.memes.svg",
+      alt: "bad.vibes.memes.svg",
+      nome: "bad.vibes.memes",
+      razao: "Segue você",
+      follow: "Seguir"
+    },
+    {
+      image: "assets/img/chibirdart.svg",
+      alt: "chibirdart",
+      nome: "chibirdart",
+      razao: "Segue você",
+      follow: "Seguir"
+    },
+    {
+      image: "assets/img/razoesparaacreditar.svg",
+      alt: "razoesparaacreditar",
+      nome: "razoesparaacreditar",
+      razao: "Novo no Instagram",
+      follow: "Seguir"
+    },
+    {
+      image: "assets/img/adorable_animals.svg",
+      alt: "adorable_animals",
+      nome: "adorable_animals",
+      razao: "Segue você",
+      follow: "Seguir"
+    },
+    {
+      image: "assets/img/smallcutecats.svg",
+      alt: "smallcutecats",
+      nome: "smallcutecats",
+      razao: "Segue você",
+      follow: "Seguir"
+    }
+  ];
+
   function Profile(props) {
     return (
       <div className="usuario">
@@ -60,11 +98,19 @@ export default function Sidebar() {
           <div style={{ cursor: 'pointer' }}>Ver tudo</div>
         </div>
 
-        <Sugestao image="assets/img/bad.vibes.memes.svg" alt="bad.vibes.memes.svg" nome="bad.vibes.memes" razao="Segue você" follow="Seguir" />
-        <Sugestao image="assets/img/chibirdart.svg" alt="chibirdart" nome="chibirdart" razao="Segue você" follow="Seguir" />
-        <Sugestao image="assets/img/razoesparaacreditar.svg" alt="razoesparaacreditar" nome="razoesparaacreditar" razao="Novo no Instagram" follow="Seguir" />
-        <Sugestao image="assets/img/adorable_animals.svg" alt="adorable_animals" nome="adorable_animals" razao="Segue você" follow="Seguir" />
-        <Sugestao image="assets/img/smallcutecats.svg" alt="smallcutecats" nome="smallcutecats" razao="Segue você" follow="Seguir" />
+
+
+        {sugestoes.map(sugestao => (
+          <Sugestao
+            image={sugestao.image}
+            alt={sugestao.alt}
+            nome={sugestao.nome}
+            razao={sugestao.razao}
+            follow={sugestao.follow}
+          />
+        ))}
+
+       
       </div>
 
       <div className="links">
