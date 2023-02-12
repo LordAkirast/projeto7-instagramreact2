@@ -103,7 +103,7 @@ function Posts(props) {
     <div data-test="post" className="post">
       <div className="topo">
         <div className="usuario">
-          <img data-test="post" src={props.image} alt={props.alt} />
+          <img src={props.image} alt={props.alt} />
           {props.name}
         </div>
         <div className="acoes">
@@ -112,7 +112,7 @@ function Posts(props) {
       </div>
 
       <div className="conteudo">
-        <img onDoubleClick={liked} src={props.postImage} alt={props.postAlt} />
+        <img data-test="post-image" onDoubleClick={liked} src={props.postImage} alt={props.postAlt} />
       </div>
 
       <div className="fundo">
