@@ -112,7 +112,10 @@ function Posts(props) {
       </div>
 
       <div className="conteudo">
-        <img data-test="post-image" onDoubleClick={liked} src={props.postImage} alt={props.postAlt} />
+        <img data-test="post-image" onDoubleClick={() => {
+          setLike('heart')
+          setlikeCount(props.name === 'meowed' ? '994' : '524')
+        }} src={props.postImage} alt={props.postAlt} />
       </div>
 
       <div className="fundo">
