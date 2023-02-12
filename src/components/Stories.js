@@ -1,4 +1,9 @@
+import React, { useState } from 'react';
+
 export default function Stories() {
+
+  
+
     return(
         <div className="esquerda">
         <div className="stories">
@@ -20,77 +25,11 @@ export default function Stories() {
         </div>
 
         <div className="posts">
-          <div className="post">
-            <div className="topo">
-              <div className="usuario">
-                <img src="assets/img/meowed.svg" alt="meowed"/>
-                meowed
-              </div>
-              <div className="acoes">
-                <ion-icon name="ellipsis-horizontal"></ion-icon>
-              </div>
-            </div>
 
-            <div className="conteudo">
-              <img src="assets/img/gato-telefone.svg" alt="gato-telefone"/>
-            </div>
+          <Posts likeCount="975" likeName="respondeai" likeAlt="respondeai" likeImage="assets/img/respondeai.svg" image="assets/img/meowed.svg" alt="meowed" name="meowed" postImage="assets/img/gato-telefone.svg" postAlt="gato-telefone"/>
+          <Posts likeCount="991" likeName="adorable_animals" likeAlt="adorable_animals" likeImage="assets/img/adorable_animals.svg" image="assets/img/barked.svg" alt="barked" name="barked" postImage="assets/img/dog.svg" postAlt="dog"/>
 
-            <div className="fundo">
-              <div className="acoes">
-                <div>
-                  <ion-icon name="heart-outline"></ion-icon>
-                  <ion-icon name="chatbubble-outline"></ion-icon>
-                  <ion-icon name="paper-plane-outline"></ion-icon>
-                </div>
-                <div>
-                  <ion-icon name="bookmark-outline"></ion-icon>
-                </div>
-              </div>
-
-              <div className="curtidas">
-                <img src="assets/img/respondeai.svg" alt="respondeai"/>
-                <div className="texto">
-                  Curtido por <strong>respondeai</strong> e <strong>outras 101.523 pessoas</strong>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="post">
-            <div className="topo">
-              <div className="usuario">
-                <img src="assets/img/barked.svg" alt="barked"/>
-                barked
-              </div>
-              <div className="acoes">
-                <ion-icon name="ellipsis-horizontal"></ion-icon>
-              </div>
-            </div>
-
-            <div className="conteudo">
-              <img src="assets/img/dog.svg" alt="dog" />
-            </div>
-
-            <div className="fundo">
-              <div className="acoes">
-                <div>
-                  <ion-icon name="heart-outline"></ion-icon>
-                  <ion-icon name="chatbubble-outline"></ion-icon>
-                  <ion-icon name="paper-plane-outline"></ion-icon>
-                </div>
-                <div>
-                  <ion-icon name="bookmark-outline"></ion-icon>
-                </div>
-              </div>
-
-              <div className="curtidas">
-                <img src="assets/img/adorable_animals.svg" alt="adorable_animals"/>
-                <div className="texto">
-                  Curtido por <strong>adorable_animals</strong> e <strong>outras 99.159 pessoas</strong>
-                </div>
-              </div>
-            </div>
-          </div>
+         
         </div>
       </div>
         
@@ -98,7 +37,7 @@ export default function Stories() {
 }
 
 
-///"assets/img/9gag.svg"
+
 function Story(props) {
   return(
     <div className="story">
@@ -112,5 +51,65 @@ function Story(props) {
 
   )
 }
+
+
+function Posts(props) {
+  const [Like, setLike] = React.useState("heart-outline")
+  const [likeCount, setlikeCount] = React.useState(props.name === 'meowed' ? '993' : '523')
+
+
+  return(
+    <div className="post">
+    <div className="topo">
+      <div className="usuario">
+        <img src={props.image} alt={props.alt}/>
+        {props.name}
+      </div>
+      <div className="acoes">
+        <ion-icon name="ellipsis-horizontal"></ion-icon>
+      </div>
+    </div>
+
+    <div className="conteudo">
+      <img onDoubleClick={liked} src={props.postImage} alt={props.postAlt}/>
+    </div>
+
+    <div className="fundo">
+      <div className="acoes">
+        <div>
+          <ion-icon onClick={liked} style={{ color: Like === 'heart-outline' ? 'black' : '#e75456' }}  name={Like === 'heart-outline' ? 'heart-outline' : 'heart'}></ion-icon>
+          <ion-icon name="chatbubble-outline"></ion-icon>
+          <ion-icon name="paper-plane-outline"></ion-icon>
+        </div>
+        <div>
+          <ion-icon name="bookmark-outline"></ion-icon>
+        </div>
+      </div>
+
+      <div className="curtidas">
+        <img src={props.likeImage} alt={props.likeAlt}/>
+        <div className="texto">
+          Curtido por <strong>{props.likeName}</strong> e <strong>outras {likeCount} pessoas</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  )
+
+
+
+
+function liked() {
+  if (Like === 'heart-outline') {
+    setLike('heart')
+    setlikeCount(props.name === 'meowed' ? '994' : '524')
+  } else {
+    setLike('heart-outline')
+    setlikeCount(props.name === 'meowed' ? '993' : '523')
+  }
+}
+}
+
 
 

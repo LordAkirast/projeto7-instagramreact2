@@ -118,9 +118,4 @@ const Sugestao = (props) => {
 
 
 
-//assets/img/catanacomics.svg
-//catanacomics
-
-
-
 
